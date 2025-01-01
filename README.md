@@ -1,0 +1,1 @@
+A responsive FAQ template featuring collapsible questions and answers. The HTML structure is simple with div elements for each FAQ item. CSS provides styling for a clean layout and interactive design, while JavaScript adds functionality to toggle answers when users click on the questions.
