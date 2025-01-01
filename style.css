@@ -1,0 +1,158 @@
+/* Define Shared Style */
+
+:root {
+  --primar-color: #2980b9;
+  --text-color: #333333;
+  --bg-color: #dfe4ea;
+  --white-color: #ffffff;
+  --bg-light-color: #f1f2f6;
+  --light-color: #7c899a;
+  --dark-color: #0a021c;
+}
+/* Base styles for the body element */
+
+body {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  line-height: 1.5;
+}
+/* Global Styling*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Heading styles */
+
+h1,
+h2 {
+  line-height: normal;
+  font-weight: 300;
+}
+/* Remove default list styling */
+
+ul {
+  list-style: none;
+}
+/* Start To Style  */
+.site .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.has-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+h1.has-icon {
+  justify-content: center;
+  margin: 60px 0;
+}
+h1.has-icon i {
+  color: var(--primar-color);
+}
+
+.accordtion {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--white-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+@media (max-width: 600px) {
+  .accordtion {
+    padding: 30px 10px;
+  }
+}
+.accordtion .heading h2 {
+  font-weight: 400px;
+}
+
+.accordtion .heading i {
+  color: orange;
+}
+
+.accordtion .heading p {
+  color: var(--light-color);
+  font-size: 15px;
+  font-size: 15x;
+}
+
+.accordtion .heading,
+.content p {
+  margin-bottom: 20px;
+}
+
+.accordtion .item li:not(:last-child) {
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.accordtion .item li h3,
+.accordtion .item li .content {
+  transition: all 0.3s ease;
+}
+.accordtion .item li h3 {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.accordtion .item li .heading-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.accordtion .item li .heading-item #close {
+  display: none;
+}
+.accordtion .item li .heading-item span {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: var(--bg-light-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.accordtion .content {
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 40px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  border-left: 3px solid var(--primary-color);
+}
+.accordtion .content p {
+  color: var(--text-color);
+}
+.accordtion .content.active {
+  max-height: 1000px;
+}
+
+.accordtion .item li.active h3 {
+  color: var(--primar-color);
+}
+
+.accordtion .item li .heading-item span#close.active {
+  display: flex;
+}
+
+.accordtion .item li .heading-item span#open.active {
+  display: none;
+}
+
+.accordtion .item li .content.active {
+  max-height: 300px;
+  background-color: #f9f9f9;
+}
